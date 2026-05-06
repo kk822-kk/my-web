@@ -26,5 +26,5 @@ urlpatterns = [
     path('home/', home_view, name='home'),
     path('contact/', contact_us, name='contact_us'),
     path('news/', news, name='news'),
-    path('photo', photos, name='photos')
+    path('photos/', photos, name='photos')
 ]
