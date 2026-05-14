@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from my_app.models import Product
 
 # Create your views here.
 def home_view(request):
@@ -7,8 +8,7 @@ def home_view(request):
 def contact_us(request):
     return render(request, 'contact.html')
 
-def news(request):
-    return render(request, 'news.html')
+def products(request):
+    return render(request, 'products.html', {"products": Product.objects.all()})
 
-def photos(request):
-    return render(request, 'photos.html')
+
